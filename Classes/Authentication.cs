@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace HiH_VP_Project_.Classes
 {
-    internal class Medical_history
+    internal class Authentication
     {
-       
-    }   
+    }
+
 }
