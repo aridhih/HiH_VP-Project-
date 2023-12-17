@@ -16,7 +16,7 @@ namespace HiH_VP_Project_.Classes
     {
         string con = "Data Source=.;Initial Catalog=OnlineDoctorAppointmentSystem;" +
             "Integrated Security=True";
-        public DataTable? ExecuteQuery(string query , bool flag)
+        public DataTable ExecuteQuery(string query , bool flag)
         {
             SqlConnection c = new SqlConnection(con);
             SqlCommand cmd = new SqlCommand(query, c);
