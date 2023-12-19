@@ -51,13 +51,15 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(203, 31);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(121, 58);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(203, 31);
-            textBox2.TabIndex = 0;
+            textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -65,7 +67,7 @@
             textBox3.Name = "textBox3";
             textBox3.PlaceholderText = "email@abc.com";
             textBox3.Size = new Size(203, 31);
-            textBox3.TabIndex = 0;
+            textBox3.TabIndex = 3;
             textBox3.Tag = "";
             // 
             // textBox4
@@ -74,7 +76,7 @@
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "10-Digits";
             textBox4.Size = new Size(203, 31);
-            textBox4.TabIndex = 0;
+            textBox4.TabIndex = 2;
             textBox4.TextChanged += textBox4_TextChanged;
             // 
             // button1
