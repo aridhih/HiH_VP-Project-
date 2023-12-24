@@ -75,6 +75,7 @@
             button3.TabIndex = 2;
             button3.Text = "UPDATE";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -85,6 +86,7 @@
             button4.TabIndex = 3;
             button4.Text = "DELETE";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // textBox1
             // 
@@ -92,6 +94,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(150, 31);
             textBox1.TabIndex = 4;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -99,6 +102,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(150, 31);
             textBox2.TabIndex = 4;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -106,6 +110,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(150, 31);
             textBox3.TabIndex = 5;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // textBox4
             // 
@@ -113,16 +118,17 @@
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(150, 31);
             textBox4.TabIndex = 6;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(88, 293);
+            dataGridView1.Location = new Point(88, 284);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(838, 332);
+            dataGridView1.Size = new Size(838, 357);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -185,6 +191,7 @@
             Controls.Add(button1);
             Name = "ManageDoctor";
             Text = "ManageDoctor";
+            Load += ManageDoctor_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
