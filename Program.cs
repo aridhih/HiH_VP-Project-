@@ -1,3 +1,4 @@
+using HiH_VP_Project_.Classes;
 using HiH_VP_Project_.Formss;
 
 namespace HiH_VP_Project_
@@ -13,7 +14,7 @@ namespace HiH_VP_Project_
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new patient());
+            Application.Run(new ManageDoctor());
         }
     }
 }

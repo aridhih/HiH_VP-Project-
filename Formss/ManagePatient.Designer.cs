@@ -29,46 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(patient));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             textBox4 = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             dataGridView1 = new DataGridView();
-            label1 = new Label();
-            label2 = new Label();
             label4 = new Label();
+            label2 = new Label();
             label3 = new Label();
+            label1 = new Label();
+            textBox3 = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(121, 21);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(203, 31);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(121, 58);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(203, 31);
-            textBox2.TabIndex = 1;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(121, 135);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "email@abc.com";
-            textBox3.Size = new Size(203, 31);
-            textBox3.TabIndex = 3;
-            textBox3.Tag = "";
             // 
             // textBox4
             // 
@@ -102,7 +77,7 @@
             button2.Name = "button2";
             button2.Size = new Size(112, 34);
             button2.TabIndex = 1;
-            button2.Text = "Check";
+            button2.Text = "Refresh";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -148,14 +123,14 @@
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentDoubleClick += dataGridView1_CellContentClick;
             // 
-            // label1
+            // label4
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(72, 25);
-            label1.TabIndex = 3;
-            label1.Text = "Name *";
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 104);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 25);
+            label4.TabIndex = 3;
+            label4.Text = "Phone no *";
             // 
             // label2
             // 
@@ -166,15 +141,6 @@
             label2.TabIndex = 3;
             label2.Text = "Address *";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 104);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 25);
-            label4.TabIndex = 3;
-            label4.Text = "Phone no *";
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -183,6 +149,41 @@
             label3.Size = new Size(67, 25);
             label3.TabIndex = 3;
             label3.Text = "Email *";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(72, 25);
+            label1.TabIndex = 3;
+            label1.Text = "Name *";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(121, 135);
+            textBox3.Name = "textBox3";
+            textBox3.PlaceholderText = "email@abc.com";
+            textBox3.Size = new Size(203, 31);
+            textBox3.TabIndex = 3;
+            textBox3.Tag = "";
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(121, 21);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(203, 31);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(121, 58);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(203, 31);
+            textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // patient
             // 
@@ -216,19 +217,19 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
         private TextBox textBox4;
         private Button button1;
         private Button button2;
         private Button button3;
         private Button button4;
         private DataGridView dataGridView1;
-        private Label label1;
-        private Label label2;
         private Label label4;
+        private Label label2;
         private Label label3;
+        private Label label1;
+        private TextBox textBox3;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Button button5;
     }
 }

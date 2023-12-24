@@ -1,4 +1,6 @@
 ﻿using HiH_VP_Project_.Classes;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace HiH_VP_Project_.Formss
 {
@@ -13,23 +15,13 @@ namespace HiH_VP_Project_.Formss
         private void patient_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = p.read();
-           
+
 
         }
 
 
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
 
-        {
-            textBox4.BackColor = Color.White;
-            if (System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "[^0-9]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
-                textBox4.Text = textBox4.Text.Remove(textBox4.Text.Length - 1);
-                textBox4.Clear();
-            }
-        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -87,8 +79,20 @@ namespace HiH_VP_Project_.Formss
                 textBox4.Focus();
                 return false;
             }
+            else if (Regex.IsMatch(textBox3.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
+            {
 
-            return true;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid Email Address (abc@xyz.com).", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox3.BackColor = Color.IndianRed;
+
+                textBox3.Focus();
+                return false;
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -177,7 +181,19 @@ namespace HiH_VP_Project_.Formss
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             textBox3.BackColor = Color.White;
+
         }
-        
+        private void textBox4_TextChanged(object sender, EventArgs e)
+
+        {
+            textBox4.BackColor = Color.White;
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox4.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox4.Clear();
+            }
+        }
+
+
     }
 }
