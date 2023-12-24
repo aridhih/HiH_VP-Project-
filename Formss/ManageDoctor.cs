@@ -1,4 +1,5 @@
 ﻿using HiH_VP_Project_.Classes;
+using System.Text.RegularExpressions;
 
 namespace HiH_VP_Project_.Formss
 {
@@ -6,10 +7,15 @@ namespace HiH_VP_Project_.Formss
     {
 
         Doctor d = new Doctor();
-        public ManageDoctor()
-        {
-            InitializeComponent();
-        }
+
+        public ManageDoctor()   {  InitializeComponent(); }
+
+
+        private void ManageDoctor_Load(object sender, EventArgs e)    {   dataGridView1.DataSource = d.read();   }
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (isValid())
@@ -27,6 +33,18 @@ namespace HiH_VP_Project_.Formss
             }
 
         }
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            dataGridView1.DataSource = d.read();
+        }
+
+
+
+
         private bool isValid()
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text))
@@ -65,19 +83,19 @@ namespace HiH_VP_Project_.Formss
                 textBox2.Focus();
                 return false;
             }
-            else if (System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+            else if (Regex.IsMatch(textBox3.Text, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
             {
 
-
-
+                return true;
+            }
+            else
+            {
                 MessageBox.Show("Please enter valid Email Address (abc@xyz.com).", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox4.BackColor = Color.IndianRed;
-                textBox4.Focus();
-                textBox3.Clear();
+                textBox3.BackColor = Color.IndianRed;
+
+                textBox3.Focus();
                 return false;
             }
-
-            return true;
         }
 
         public void reset()
@@ -89,11 +107,6 @@ namespace HiH_VP_Project_.Formss
             textBox3.Clear();
             textBox4.Clear();
             textBox1.Focus();
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            dataGridView1.DataSource = d.read();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -116,10 +129,7 @@ namespace HiH_VP_Project_.Formss
             }
         }
 
-        private void ManageDoctor_Load(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = d.read();
-        }
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -129,6 +139,11 @@ namespace HiH_VP_Project_.Formss
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             textBox2.BackColor = Color.White;
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox2.Clear();
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
