@@ -1,5 +1,4 @@
 ﻿using HiH_VP_Project_.Classes;
-using System.Net.Mail;
 using System.Text.RegularExpressions;
 
 namespace HiH_VP_Project_.Formss
@@ -18,12 +17,6 @@ namespace HiH_VP_Project_.Formss
 
 
         }
-
-
-
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (isValid())
