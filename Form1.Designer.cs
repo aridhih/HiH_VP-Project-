@@ -34,6 +34,8 @@
             textBox2 = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -54,6 +56,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(165, 31);
             textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -87,6 +90,31 @@
             label2.Text = "Password";
             label2.Click += label2_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(475, 92);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 21);
+            label3.TabIndex = 3;
+            label3.Text = "admin";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(483, 165);
+            label4.Name = "label4";
+            label4.Size = new Size(40, 21);
+            label4.TabIndex = 4;
+            label4.Text = "123";
+            label4.Click += label2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
@@ -94,7 +122,9 @@
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(545, 409);
+            Controls.Add(label4);
             Controls.Add(label2);
+            Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -115,5 +145,7 @@
         private TextBox textBox2;
         private Label label1;
         private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

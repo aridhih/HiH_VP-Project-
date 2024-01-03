@@ -1,4 +1,5 @@
 using HiH_VP_Project_.Formss;
+using System.Diagnostics.Eventing.Reader;
 
 namespace HiH_VP_Project_
 {
@@ -21,9 +22,27 @@ namespace HiH_VP_Project_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text == "admin" && textBox2.Text == "123")
+            {
+                login();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Entry.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void login()
+        {
             Dashboard m = new Dashboard();
             m.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
