@@ -193,6 +193,13 @@ namespace HiH_VP_Project_.Formss
             else
                 MessageBox.Show("Please Select a Record to Delete.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Dashboard ap = new Dashboard();
+            ap.Show();
+            this.Close();
+        }
     }
 }
 

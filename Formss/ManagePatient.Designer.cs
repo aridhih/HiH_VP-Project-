@@ -42,6 +42,7 @@
             textBox3 = new TextBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -185,12 +186,25 @@
             textBox2.TabIndex = 1;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ActiveCaption;
+            button5.Font = new Font("Arial Black", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button5.Location = new Point(922, 12);
+            button5.Name = "button5";
+            button5.Size = new Size(59, 53);
+            button5.TabIndex = 9;
+            button5.Text = "←";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += this.button5_Click;
+            // 
             // patient
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1014, 701);
+            Controls.Add(button5);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label3);
@@ -230,6 +244,6 @@
         private TextBox textBox3;
         private TextBox textBox1;
         private TextBox textBox2;
-        
+        private Button button5;
     }
 }

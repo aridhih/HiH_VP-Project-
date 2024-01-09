@@ -59,5 +59,45 @@ namespace HiH_VP_Project_.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_460713580_stock_photo_medical_health_blue_cross_neon {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_460713580-stock-photo-medical-health-blue-cross-neon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap New_file__1_ {
+            get {
+                object obj = ResourceManager.GetObject("New-file (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2024_01_09_095947 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2024-01-09 095947", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wp2208679_pubg_wallpapers {
+            get {
+                object obj = ResourceManager.GetObject("wp2208679-pubg-wallpapers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

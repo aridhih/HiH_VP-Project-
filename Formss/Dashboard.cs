@@ -30,5 +30,17 @@ namespace HiH_VP_Project_.Formss
             doc.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BookAppointmnet ap = new BookAppointmnet();
+            ap.Show();
+            this.Close();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

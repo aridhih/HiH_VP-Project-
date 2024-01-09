@@ -186,7 +186,14 @@ namespace HiH_VP_Project_.Formss
                 textBox4.Clear();
             }
         }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Dashboard ap = new Dashboard();
+            ap.Show();
+            this.Close();
+        }
+    
 
 
-    }
+}
 }

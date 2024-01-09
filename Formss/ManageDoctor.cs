@@ -8,10 +8,10 @@ namespace HiH_VP_Project_.Formss
 
         Doctor d = new Doctor();
 
-        public ManageDoctor()   {  InitializeComponent(); }
+        public ManageDoctor() { InitializeComponent(); }
 
 
-        private void ManageDoctor_Load(object sender, EventArgs e)    {   dataGridView1.DataSource = d.read();   }
+        private void ManageDoctor_Load(object sender, EventArgs e) { dataGridView1.DataSource = d.read(); }
 
 
 
@@ -129,7 +129,7 @@ namespace HiH_VP_Project_.Formss
             }
         }
 
-        
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -190,6 +190,14 @@ namespace HiH_VP_Project_.Formss
             else
                 MessageBox.Show("Please Select a Record to Delete.", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Dashboard ap = new Dashboard();
+            ap.Show();
+            this.Close();
+        }
     }
+        
 
 }

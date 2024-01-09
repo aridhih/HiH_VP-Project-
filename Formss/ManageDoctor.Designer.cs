@@ -41,6 +41,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            button5 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -170,12 +171,25 @@
             label4.TabIndex = 9;
             label4.Text = "Location *";
             // 
+            // button5
+            // 
+            button5.BackColor = SystemColors.ActiveCaption;
+            button5.Font = new Font("Arial Black", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            button5.Location = new Point(867, 12);
+            button5.Name = "button5";
+            button5.Size = new Size(59, 53);
+            button5.TabIndex = 9;
+            button5.Text = "←";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += this.button5_Click;
+            // 
             // ManageDoctor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1008, 653);
+            Controls.Add(button5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -212,5 +226,6 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button button5;
     }
 }
