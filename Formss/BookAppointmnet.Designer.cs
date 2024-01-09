@@ -38,50 +38,65 @@
             label4 = new Label();
             textBox2 = new TextBox();
             textBox3 = new TextBox();
+            dataGridView3 = new DataGridView();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(238, 92);
+            textBox1.Location = new Point(137, 98);
             textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Select Doctor";
             textBox1.Size = new Size(150, 31);
             textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(429, 22);
+            dataGridView1.Location = new Point(293, 39);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(424, 225);
+            dataGridView1.Size = new Size(796, 220);
             dataGridView1.TabIndex = 2;
+            dataGridView1.CellClick += dataGridView1_CellContentClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellContentDoubleClick += dataGridView1_CellContentClick;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(880, 22);
+            dataGridView2.Location = new Point(1116, 39);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 62;
-            dataGridView2.Size = new Size(424, 225);
+            dataGridView2.Size = new Size(796, 220);
             dataGridView2.TabIndex = 3;
+            dataGridView2.CellClick += dataGridView2_CellContentClick;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridView2.CellContentDoubleClick += dataGridView2_CellContentClick;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(238, 33);
+            textBox4.Location = new Point(137, 39);
             textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Select Patient";
             textBox4.Size = new Size(150, 31);
             textBox4.TabIndex = 0;
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.Black;
+            label1.BackColor = SystemColors.ActiveBorder;
             label1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(54, 39);
+            label1.Location = new Point(8, 39);
             label1.Name = "label1";
             label1.Size = new Size(102, 25);
             label1.TabIndex = 4;
@@ -90,10 +105,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.Black;
+            label2.BackColor = SystemColors.ActiveBorder;
             label2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(58, 98);
+            label2.Location = new Point(12, 98);
             label2.Name = "label2";
             label2.Size = new Size(98, 25);
             label2.TabIndex = 4;
@@ -102,10 +117,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.Black;
+            label3.BackColor = SystemColors.ActiveBorder;
             label3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(58, 163);
+            label3.Location = new Point(12, 163);
             label3.Name = "label3";
             label3.Size = new Size(54, 25);
             label3.TabIndex = 4;
@@ -114,10 +129,10 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.Black;
+            label4.BackColor = SystemColors.ActiveBorder;
             label4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(58, 219);
+            label4.Location = new Point(12, 219);
             label4.Name = "label4";
             label4.Size = new Size(56, 25);
             label4.TabIndex = 4;
@@ -125,30 +140,91 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(238, 216);
+            textBox2.Location = new Point(137, 222);
             textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "12AM";
             textBox2.Size = new Size(150, 31);
             textBox2.TabIndex = 0;
             textBox2.TextChanged += textBox2_TextChanged_1;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(238, 157);
+            textBox3.Location = new Point(137, 163);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(150, 31);
             textBox3.TabIndex = 0;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
+            // dataGridView3
+            // 
+            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView3.Location = new Point(510, 315);
+            dataGridView3.Name = "dataGridView3";
+            dataGridView3.RowHeadersWidth = 62;
+            dataGridView3.Size = new Size(925, 411);
+            dataGridView3.TabIndex = 3;
+            dataGridView3.CellClick += dataGridView3_CellContentClick;
+            dataGridView3.CellContentClick += dataGridView3_CellContentClick;
+            dataGridView3.CellContentDoubleClick += dataGridView3_CellContentClick;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(293, 404);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 5;
+            button1.Text = "Create";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Location = new Point(293, 471);
+            button2.Name = "button2";
+            button2.Size = new Size(112, 34);
+            button2.TabIndex = 6;
+            button2.Text = "Read";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Location = new Point(293, 546);
+            button3.Name = "button3";
+            button3.Size = new Size(112, 34);
+            button3.TabIndex = 7;
+            button3.Text = "Update";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Arial", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(293, 622);
+            button4.Name = "button4";
+            button4.Size = new Size(112, 34);
+            button4.TabIndex = 8;
+            button4.Text = "Delete";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // BookAppointmnet
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1338, 292);
+            BackColor = SystemColors.ActiveBorder;
+            ClientSize = new Size(1924, 749);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(dataGridView3);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(textBox3);
@@ -157,9 +233,11 @@
             Controls.Add(textBox1);
             Name = "BookAppointmnet";
             Text = "BookAppointmnet";
+            WindowState = FormWindowState.Maximized;
             Load += BookAppointmnet_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -176,5 +254,10 @@
         private Label label4;
         private TextBox textBox2;
         private TextBox textBox3;
+        private DataGridView dataGridView3;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }
